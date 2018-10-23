@@ -1,8 +1,7 @@
 <!doctype html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel</title>
@@ -52,7 +51,7 @@
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
-                font-size: 12px;
+                font-size: 13px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
@@ -61,16 +60,6 @@
 
             .m-b-md {
                 margin-bottom: 30px;
-            }
-            .btn-start{
-                position:absolute;
-                color: black;
-                background: #eee;
-                border-radius: 10px;
-                margin-top: 50px;
-                width: 50px;
-                padding: 0px 10px;
-                cursor: pointer;
             }
         </style>
     </head>
@@ -82,14 +71,17 @@
                         <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}">Register</a>
+                        @endif
                     @endauth
                 </div>
             @endif
 
             <div class="content">
                 <div class="title m-b-md">
-                    Project
+                    Laravel
                 </div>
 
                 <div class="links">
@@ -99,9 +91,6 @@
                     <a href="https://nova.laravel.com">Nova</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-                <div class ="botton" fonclick="start()">
-                    <span class="btn-start">Start</span>
                 </div>
             </div>
         </div>
