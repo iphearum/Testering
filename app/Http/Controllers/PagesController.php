@@ -14,7 +14,7 @@ class PagesController extends Controller
         return view('pages.home')->with('title',$title);
     }
     public function index(){
-        $title = 'Welcome to Laravel!';
+        $title = 'Welcome to Page Index';
         // return view('pages.index',compact('title'));
         return view('pages.index')->with('title',$title);
     }
