@@ -15,8 +15,8 @@
 //     return view('welcome');
 // });
 
-Route::get('/','PagesController@index');
+Route::get('/','PagesController@index ');
 Route::get('/about','PagesController@about');
 Route::get('/service','PagesController@services');
 
-Route::resource('posts','Postcontroller');
+Route::resource('posts','PostController');

@@ -14,8 +14,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        return Post::all();
-        return view('posts.index');
+        // return Post::all();
+        // return view('posts.index');
     }
 
     /**
@@ -81,6 +81,6 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // 
     }
 }
