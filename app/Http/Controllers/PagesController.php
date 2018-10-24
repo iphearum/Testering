@@ -6,15 +6,9 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
-    //
-    public function home()
-    {
-        $title = 'Welcome to Page Home!';
-        // return view('pages.index',compact('title'));
-        return view('pages.home')->with('title',$title);
-    }
+    
     public function index(){
-        $title = 'Welcome to Page Index';
+        $title = 'Welcome to Index Page';
         // return view('pages.index',compact('title'));
         return view('pages.index')->with('title',$title);
     }
