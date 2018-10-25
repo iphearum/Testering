@@ -6,7 +6,14 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
-    
+    // public function home(){
+    //     return view('pages.')
+    // }
+    public function home(){
+        // $title = 'Welcome to Index Page';
+        // return view('pages.index',compact('title'));
+        return view('posts.index');
+    }
     public function index(){
         $title = 'Welcome to Index Page';
         // return view('pages.index',compact('title'));
