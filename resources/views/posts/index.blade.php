@@ -26,6 +26,7 @@
             </div>
         </div>
         <div class="col-md-6 gedf-main">
+        <button class="btn btn-primary margin" onclick="post()">Post</button>
     @if (count($posts) > 1)
         @foreach ($posts as $post)
             {{-- <div class="container" style="border:1px solid blue; border-radius:20px; margin:4px; padding: 5px 20px;">
@@ -41,7 +42,7 @@
                                 <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
                             </div>
                             <div class="ml-2">
-                                <div class="h5 m-0"><a href="/posts/{{$post->id}}">{{$post->story}}</a></div>
+                                <div class="h5 m-0"><a href="/posts/{{$post->id}}">Name's Post</a></div>
                                 <div class="h7 text-muted">Miracles Lee Cross</div>
                             </div>
                         </div>
@@ -64,7 +65,7 @@
                 <div class="card-body">
                     <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i><small>Date: {{$post->created_at}}</small></div>
                     <a class="card-link" href="#">
-                        <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adip.</h5>
+                        <h5 class="card-title">{{$post->title}}</h5>
                     </a>
 
                     <p class="card-text">
@@ -83,4 +84,10 @@
     @else
     <p>No posts found</p>
     @endif
+
+    <script>
+        function post(){
+            window.location.href ="/posts/create";
+        }
+    </script>
 @endsection

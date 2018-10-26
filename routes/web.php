@@ -19,4 +19,5 @@ Route::get('/','PagesController@index');
 Route::get('/about','PagesController@about');
 Route::get('/service','PagesController@services');
 
-Route::resource('/home','PostController');
+Route::resource('/posts','PostController');
+// Route::resource('/create','PostController@create');

@@ -6,7 +6,7 @@
     </span>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="/posts">Home <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="/about">About</a>
             <a class="nav-item nav-link" href="/service">Services</a>
         </div>

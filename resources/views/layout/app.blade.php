@@ -22,8 +22,17 @@
             .margin{
                 margin: 10px;
             }
-            td{
+            .margin-top5{
+                margin-top: 5px;
+            }
+            .margin-top10{
+                margin-top: 10px;
+            }
+            tr,td{
                 padding: 5px;
+            }
+            .uppercast{
+                
             }
         </style>
         
@@ -31,6 +40,9 @@
     <body>
          @include('inc.navbar')
         <div class="container-fluid">
+            <div class="margin-top10">
+                @include('inc.messager')
+            </div>
             @yield('content')
         </div>
     </body>
