@@ -34,6 +34,9 @@
             .uppercast{
                 
             }
+            .margin-right{
+                margin-right:100px;
+            }
         </style>
         
     </head>

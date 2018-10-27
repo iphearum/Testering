@@ -15,3 +15,6 @@
 {{-- Controller --}}
 {{-- Route push data to api and cover all data example url:www.example.com--}}
 {{-- backend -> controller example login -> API--}}
+
+{{-- MVC --}}
+{{-- view -> controller -> model --}}
