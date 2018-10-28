@@ -31,15 +31,15 @@
             <div class="modal-dialog modal-lg">
                 <div class="modal-content margin">
                     {!! Form::open(['action' => 'PostController@store', 'method' => 'POST']) !!}
-                    <div class="form-group margin-top10">
-                        {{Form::label('title', 'Title')}}
+                    <div class="form-group margin">
+                        {{-- {{Form::label('title', 'Title')}} --}}
                         {{Form::text('title', '', ['class'=>'form-control', 'placeholder' => 'Title', 'aria-label' => 'small', 'aria-describedby' => 'inputGroup-sizing-sm'])}}
                     </div>
-                    <div class="form-group">
-                        {{Form::label('body', 'Body')}}
-                        {{Form::textarea('body', '', ['class' => 'form-control', 'placeholder' => 'Text Body'])}}
+                    <div class="form-group margin">
+                        {{-- {{Form::label('body', 'Body')}} --}}
+                        {{Form::textarea('body', '', ['class' => 'form-control','style'=>'border:1px solid blue; height:80px', 'placeholder' => 'Text Body'])}}
                     </div>
-                    {{Form::submit('submit',['class' => 'btn btn-primary'])}}
+                    {{Form::submit('submit',['class' => 'btn btn-primary margin pull-right'])}}
                     {!! Form::close() !!}
                 </div>
             </div>

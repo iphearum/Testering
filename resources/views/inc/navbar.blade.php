@@ -1,8 +1,8 @@
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary" style="border:1px solid #eee; border-radius:5px">
     <a class="navbar-brand active" href="/">{{config('app.name','myWeb')}}</a>
     
-    <span class="navbar-toggler" onclick="shownav()" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler" onclick="shownav()" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </span>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">

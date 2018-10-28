@@ -15,12 +15,13 @@ class PostController extends Controller
      */
     public function index()
     {
-        // if ($post = Post($id)) {
+        // @if(count($post)>0) {
         //     # code...
         //     return view('posts.index')->with('posts',$posts);
-        // } else {
+        // @endif
+        // @else
         //     # code...
-        // }
+        // @endelse
         $posts = Post::orderBy('created_at','desc')->paginate(10);
         return view('posts.index')->with('posts',$posts);
         
