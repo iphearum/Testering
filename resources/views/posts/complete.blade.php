@@ -1,10 +1,32 @@
 @extends('layout.app')
 @section('content')
 
-<div class="row justify-content-center container">
-    <div class="col-md-8">
-        {{-- Pop up post --}}
+<div class="container-fluid gedf-wrapper">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="h5">NOP PHEARUM</div>
+                    <div class="h7 text-muted">Fullname : Phnom Penh, Cambodia</div>
+                    <div class="h7">Hello to other world</div>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <div class="h6 text-muted">Followers</div>
+                        <div class="h5">50K</div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="h6 text-muted">Following</div>
+                        <div class="h5">6758</div>
+                    </li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6 gedf-main">
+        {{-- <button class="btn btn-primary margin" onclick="post()">Post</button> --}}
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Post</button>
+
         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content margin">
@@ -23,11 +45,14 @@
             </div>
         </div>
 
-        {{-- Loop post --}}
-        @if (count($posts) > 1)
+    @if (count($posts) > 1)
         @foreach ($posts as $post)
-             {{-- <div class="card gedf-card margin"> --}}
-             <div class="card margin-top5">
+            {{-- <div class="container" style="border:1px solid blue; border-radius:20px; margin:4px; padding: 5px 20px;">
+                <h2><a href="/posts/{{$post->id}}">{{$post->story}}</a></h2>
+                <small>Writen on {{$post->created_at}}</small>
+            </div> --}}
+             <!--- \\\\\\\Post-->
+             <div class="card gedf-card margin">
                 <div class="card-header">
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="d-flex justify-content-between align-items-center">
@@ -77,13 +102,12 @@
                     <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
                 </div>
             </div>
-            @endforeach
-            @else
-                <p>No posts found</p>
-            @endif
-            {{-- end loop post --}}
-        </div>
-    </div>
+            <!-- Post /////-->
+        @endforeach
+    @else
+    <p>No posts found</p>
+    @endif
+
     <script>
         function post(){
             window.location.href ="/posts/create";
