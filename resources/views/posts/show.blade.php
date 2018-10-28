@@ -5,6 +5,7 @@
     <h3 class="uppercase">{{$post->title}}</h3>
     <small>Writen on {{$post->created_at}}</small>
     <p>{{$post->body}}</p>
+    <hr>
     <script>
         // var back = document.getElementById('home-goback');
         function backPage(){

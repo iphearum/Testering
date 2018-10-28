@@ -70,9 +70,14 @@
                                     <i class="fa fa-ellipsis-h"></i>
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
-                                    <div class="h6 dropdown-header">Configuration</div>
+                                    {{-- <div class="h6 dropdown-header">Configuration</div> --}}
+                                    <a href="/posts/{{$post->id}}/edit" class="dropdown-item">Edit</a>
                                     <a class="dropdown-item" href="#">Save</a>
-                                    <a class="dropdown-item" href="#">Hide</a>
+                                    {{-- <a class="dropdown-item" href="#">Delete</a> --}}
+                                    {!!Form::open(['action'=>['PostController@destroy',$post->id], 'method'=>'POST'])!!}
+                                        {{Form::hidden('_method','DELETE')}}
+                                        {{Form::submit('Delete',['class'=>'dropdown-item'])}}
+                                    {!!Form::close()!!}
                                     <a class="dropdown-item" href="#">Report</a>
                                 </div>
                             </div>
@@ -83,7 +88,7 @@
                 <div class="card-body">
                     <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i><small>Date: {{$post->created_at}}</small></div>
                     <a class="card-link" href="#">
-                        <h5 class="card-title">{{$post->title}}</h5>
+                        <h5 class="card-title"><a href="/posts/{{$post->id}}">{{$post->title}}</a></h5>
                     </a>
 
                     <p class="card-text">
