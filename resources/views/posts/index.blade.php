@@ -1,7 +1,7 @@
-@extends('layout.app')
+@extends('layouts.app')
 @section('content')
 
-<div class="row justify-content-center container">
+<div class="row justify-content-center">
     <div class="col-md-8">
         {{-- Pop up post --}}
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Post</button>
@@ -35,8 +35,16 @@
                                 <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
                             </div>
                             <div class="ml-2">
-                                <div class="h5 m-0"><a href="/posts/{{$post->id}}">Name's Post</a></div>
-                                <div class="h7 text-muted">Miracles Lee Cross</div>
+                                <div class="h5 m-0">
+                                    <a href="/posts/{{$post->id}}">
+                                        {{-- {{$post->user->name}} --}}
+                                        Name's Post
+                                    </a>
+                                </div>
+                                <div class="h7 text-muted">
+                                    {{--  --}}
+                                    Place's Post
+                                </div>
                             </div>
                         </div>
                         <div>
@@ -67,8 +75,9 @@
                     </a>
 
                     <p class="card-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo recusandae nulla rem eos ipsa praesentium esse magnam nemo dolor
-                        sequi fuga quia quaerat cum, obcaecati hic, molestias minima iste voluptates.
+                        {{$post->body}}
+                        {{-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo recusandae nulla rem eos ipsa praesentium esse magnam nemo dolor
+                        sequi fuga quia quaerat cum, obcaecati hic, molestias minima iste voluptates. --}}
                     </p>
                 </div>
                 <div class="card-footer">

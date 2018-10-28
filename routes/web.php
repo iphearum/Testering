@@ -14,13 +14,10 @@
 // Route::get('/', function () {
 //     return view('posts.index');
 // });
-
 Route::get('/','PagesController@index');
 Route::get('/about','PagesController@about');
 Route::get('/service','PagesController@services');
-
 Route::resource('/posts','PostController');
-// Route::resource('/create','PostController@create');
-Auth::routes();
 
+Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');

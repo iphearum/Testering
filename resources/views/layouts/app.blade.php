@@ -18,43 +18,12 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <style>
-        .signup,.login{
-            display: none;
-        }
-        .btn01{
-            display: none;
-            width: 60px;
-        }
-        .margin{
-            margin: 10px;
-        }
-        .margin-top5{
-            margin-top: 5px;
-        }
-        .margin-top10{
-            margin-top: 50px;
-        }
-        tr,td{
-            padding: 5px;
-        }
-        .margin-bottom{
-            margin-bottom: 20px;
-        }
-        .margin-right{
-            margin-right:100px;
-        }
-    </style>
-</head>
-<body>
-    <div class="fixed-top">
+    
+    @include('inc.style')
         @include('inc.navbar')
-    </div>
-    <div class="container-fluid">
-        <div class="margin-top10">
-            @include('inc.messager')
-        </div>
-        @yield('content')
+        <main class="py-4">
+            @yield('content')
+        </main>
     </div>
 </body>
 </html>

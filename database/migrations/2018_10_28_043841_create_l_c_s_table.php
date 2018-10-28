@@ -15,6 +15,9 @@ class CreateLCSTable extends Migration
     {
         Schema::create('l_c_s', function (Blueprint $table) {
             $table->increments('id');
+            // $table->int('like');
+            // $table->int('share');
+            // $table->int('comment');
             $table->timestamps();
         });
     }
