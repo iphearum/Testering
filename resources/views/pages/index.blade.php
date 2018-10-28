@@ -4,7 +4,6 @@
     <div class="jumbotron text-center margin" id = "replace">
         <h1>{{$title}}</h1>
         <p>This is the index page</p>
-            @include('inc.index')
             <span class="btn btn-primary btn-default bs-popover-bottom" onclick="login()">Sign In</span>
             <span class="btn btn-primary btn-danger bs-popover-bottom" onclick="signup()">Sign Up</span>
     </div>

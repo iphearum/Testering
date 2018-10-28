@@ -10,5 +10,4 @@
         @endforeach
     </ul>
     @endif
-    @include('inc.services')
 @endsection

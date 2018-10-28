@@ -8,13 +8,3 @@
             Change a few things up and try submitting again.</p>
     </div>
 </div>
-
-{{-- MVC --}}
-{{-- model --}}
-{{-- View --}}
-{{-- Controller --}}
-{{-- Route push data to api and cover all data example url:www.example.com--}}
-{{-- backend -> controller example login -> API--}}
-
-{{-- MVC --}}
-{{-- view -> controller -> model --}}
