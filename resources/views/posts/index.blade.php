@@ -28,22 +28,22 @@
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Post</button>
 
         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                {!! Form::open(['action' => 'PostController@store', 'method' => 'POST']) !!}
-                <div class="form-group margin-top10">
-                    <h3>{{Form::label('title', 'Title')}}</h3>
-                    {{Form::text('title', '', ['class'=>'form-control', 'placeholder' => 'Title', 'aria-label' => 'small', 'aria-describedby' => 'inputGroup-sizing-sm'])}}
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content margin">
+                    {!! Form::open(['action' => 'PostController@store', 'method' => 'POST']) !!}
+                    <div class="form-group margin-top10">
+                        {{Form::label('title', 'Title')}}
+                        {{Form::text('title', '', ['class'=>'form-control', 'placeholder' => 'Title', 'aria-label' => 'small', 'aria-describedby' => 'inputGroup-sizing-sm'])}}
+                    </div>
+                    <div class="form-group">
+                        {{Form::label('body', 'Body')}}
+                        {{Form::textarea('body', '', ['class' => 'form-control', 'placeholder' => 'Text Body'])}}
+                    </div>
+                    {{Form::submit('submit',['class' => 'btn btn-primary'])}}
+                    {!! Form::close() !!}
                 </div>
-                <div class="form-group">
-                    <h3>{{Form::label('body', 'Body')}}</h3>
-                    {{Form::textarea('body', '', ['class' => 'form-control', 'placeholder' => 'Body'])}}
-                </div>
-                {{Form::submit('submit',['class' => 'btn btn-primary'])}}
-                {!! Form::close() !!}
             </div>
         </div>
-    </div>
 
     @if (count($posts) > 1)
         @foreach ($posts as $post)

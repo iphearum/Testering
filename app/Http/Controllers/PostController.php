@@ -15,8 +15,15 @@ class PostController extends Controller
      */
     public function index()
     {
+        // if ($post = Post($id)) {
+        //     # code...
+        //     return view('posts.index')->with('posts',$posts);
+        // } else {
+        //     # code...
+        // }
         $posts = Post::orderBy('created_at','desc')->paginate(10);
         return view('posts.index')->with('posts',$posts);
+        
     }
 
     /**
