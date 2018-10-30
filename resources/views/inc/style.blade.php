@@ -8,8 +8,15 @@
     .margin-right{
         margin-right:100px;
     }
-    tr,td{
+    .uppercase{
+        text-transform: uppercase;
+    }
+    th,td{
         padding: 5px;
+        margin: 10px;
+    }
+    th{
+        text-transform: uppercase;
     }
 </style>
 </head>

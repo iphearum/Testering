@@ -15,7 +15,7 @@
                     </div>
                     <div class="form-group margin">
                         {{-- {{Form::label('body', 'Body')}} --}}
-                        {{Form::textarea('body', '', ['class' => 'form-control','style'=>'border:1px solid blue; height:80px', 'placeholder' => 'Text Body'])}}
+                        {{Form::textarea('body', '', ['class' => 'form-control','style'=>'border:1px solid blue; height:100px', 'placeholder' => 'Text Body'])}}
                     </div>
                     {{Form::submit('submit',['class' => 'btn btn-primary margin pull-right'])}}
                     {!! Form::close() !!}
@@ -71,7 +71,7 @@
                 <div class="card-body">
                     <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i><small>Date: {{$post->created_at}}</small></div>
                     <a class="card-link" href="#">
-                        <h5 class="card-title"><a href="/posts/{{$post->id}}">{{$post->title}}</a></h5>
+                        <h5 class="card-title uppercase"><a href="/posts/{{$post->id}}">{{$post->title}}</a></h5>
                     </a>
 
                     <p class="card-text">
